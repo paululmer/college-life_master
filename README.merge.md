@@ -12,23 +12,6 @@ The proposed architecture retains essential on-premises workloads and introduces
 
 This report adapts the supplied *Secure Merged Network Design Proposal* into a GitHub-readable format. It documents architectural reasoning and proposed controls; it does not claim implementation, penetration testing, compliance certification, or verified vendor pricing.
 
-## Contents
-
-- [Business requirements](#business-requirements)
-- [Security assessment](#security-assessment)
-- [Proposed architecture](#proposed-architecture)
-- [Network segmentation](#network-segmentation)
-- [OSI and TCP/IP mapping](#osi-and-tcpip-mapping)
-- [Security principles](#security-principles)
-- [Compliance considerations](#compliance-considerations)
-- [Emerging threats and performance](#emerging-threats-and-performance)
-- [Infrastructure recommendation](#infrastructure-recommendation)
-- [First-year budget](#first-year-budget)
-- [Implementation approach](#implementation-approach)
-- [Design limitations](#design-limitations)
-- [Skills demonstrated](#skills-demonstrated)
-- [References](#references)
-
 ## Business requirements
 
 The merged organization needs to:
