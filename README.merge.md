@@ -43,40 +43,6 @@ The design uses site firewalls, managed switching, segmented local networks, and
 
 The following diagram is a **logical view**. Dotted links indicate service integrations or protected logical connections, not dedicated physical cables. Identity, monitoring, and backup services are not a serial transit path for all network traffic.
 
-```mermaid
-flowchart TB
-    Internet["Internet"]
-    WebProtection["Cloud DDoS protection and WAF"]
-    Cloud["Shared cloud security and recovery services"]
-
-    subgraph SiteA["Company A site"]
-        FWA["Next-generation firewall"]
-        DMZA["Public web and application DMZ"]
-        SWA["Managed switch infrastructure"]
-        NetworksA["Segmented internal networks"]
-        FWA --- SWA
-        FWA --- DMZA
-        SWA --- NetworksA
-    end
-
-    subgraph SiteB["Company B site"]
-        FWB["Next-generation firewall"]
-        DMZB["Public web and application DMZ"]
-        SWB["Managed switch infrastructure"]
-        NetworksB["Segmented internal networks"]
-        FWB --- SWB
-        FWB --- DMZB
-        SWB --- NetworksB
-    end
-
-    Internet --> WebProtection
-    WebProtection -->|"Protected web traffic"| FWA
-    WebProtection -->|"Protected web traffic"| FWB
-    FWA <-.->|"IPsec tunnel over Internet"| FWB
-    FWA -. "Encrypted service connections" .-> Cloud
-    FWB -. "Encrypted service connections" .-> Cloud
-```
-
 ### Shared cloud capabilities
 
 | Capability | Proposed purpose |
